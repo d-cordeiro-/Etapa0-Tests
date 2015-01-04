@@ -1,8 +1,5 @@
 apply plugin: 'com.android.application'
 
-//Put Fabric plugin after Android plugin
-apply plugin: 'io.fabric'
-
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
@@ -27,18 +24,3 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile project(':libraries:facebook')
 }
-
-
-buildscript {
-    repositories {
-        jcenter()
-        maven { url 'https://maven.fabric.io/repo' }
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:0.13.3'
-        // The Fabric Gradle plugin uses an open ended version to
-        // react quickly to Android tooling updates
-        classpath 'io.fabric.tools:gradle:1.+'
-    }
-}
-

@@ -19,10 +19,6 @@ import android.widget.TextView;
 
 import java.util.concurrent.TimeUnit;
 
-import io.fabric.sdk.android.Fabric;
-import com.twitter.sdk.android.Twitter;
-import com.twitter.sdk.android.core.TwitterAuthConfig;
-
 
 public class MainActivity extends ActionBarActivity //FragmentActivity
     implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -45,9 +41,6 @@ public class MainActivity extends ActionBarActivity //FragmentActivity
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
         mTitle = getTitle();
-
-        TwitterAuthConfig authConfig = new TwitterAuthConfig("consumerKey", "consumerSecret");
-        Fabric.with(this, new Twitter(authConfig));
 
         // Set up the drawer.
         mNavigationDrawerFragment.setUp(
